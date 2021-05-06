@@ -1,0 +1,57 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Game.gd" type="Script" id=2]
+[ext_resource path="res://Spike.tscn" type="PackedScene" id=3]
+[ext_resource path="res://bg.png" type="Texture" id=4]
+
+[sub_resource type="ProceduralSky" id=1]
+
+[sub_resource type="Environment" id=2]
+background_mode = 2
+background_sky = SubResource( 1 )
+glow_enabled = true
+glow_intensity = 5.24
+glow_strength = 1.76
+glow_bloom = 0.57
+glow_blend_mode = 0
+
+[node name="Game" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="bg" type="Sprite" parent="."]
+position = Vector2( 4.84814, 23.9448 )
+scale = Vector2( 1.05339, 1.05339 )
+z_index = -1
+texture = ExtResource( 4 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( -6.2016, 2.12292 )
+
+[node name="Spike" parent="." instance=ExtResource( 3 )]
+position = Vector2( -222.454, 245.955 )
+
+[node name="Spike4" parent="." instance=ExtResource( 3 )]
+position = Vector2( -253.597, -262.191 )
+rotation = -3.14159
+
+[node name="Spike5" parent="." instance=ExtResource( 3 )]
+position = Vector2( 75.3227, -262.24 )
+rotation = -3.14159
+
+[node name="Spike6" parent="." instance=ExtResource( 3 )]
+position = Vector2( 268.053, -261.308 )
+rotation = -3.14159
+
+[node name="Spike2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 382.346, 252.305 )
+
+[node name="Spike3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 64.8659, 252.305 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 1.22168, -10.6069 )
+current = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 2 )
