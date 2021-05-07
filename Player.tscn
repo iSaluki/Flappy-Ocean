@@ -7,6 +7,7 @@
 extents = Vector2( 7.95277, 8.09491 )
 
 [sub_resource type="OccluderPolygon2D" id=2]
+polygon = PoolVector2Array( 40.4478, 39.8779, 40.4478, -39.5451, -39.6426, -39.5451, -40.31, 40.5453 )
 
 [node name="Player" type="KinematicBody2D"]
 script = ExtResource( 2 )
@@ -22,4 +23,5 @@ scale = Vector2( 5.12, 5.12 )
 shape = SubResource( 1 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+visible = false
 occluder = SubResource( 2 )

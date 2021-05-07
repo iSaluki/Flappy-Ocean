@@ -16,9 +16,15 @@ func get_input():
 	if Input.is_action_pressed("jump"):
 		velocity.y = -movevelocity
 
+func Kill():
+	print("The player has been killed")
+
 func _physics_process(delta):
 	global_position.x = 0
 	velocity.y = gravity
 	get_input()
 	get_collisions()
-	move_and_slide(velocity)
+	
+	var collision = move_and_collide(velocity * delta)
+	if collision:
+		Kill()

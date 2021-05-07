@@ -1,21 +1,20 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://spike.png" type="Texture" id=1]
+[ext_resource path="res://long_spike.png" type="Texture" id=1]
 [ext_resource path="res://Spike.gd" type="Script" id=2]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 9.46246
-height = 0.0
+height = 89.1384
 
 [node name="Spike" type="Sprite"]
-position = Vector2( 1.08524, 0.395096 )
-scale = Vector2( 5.76, 6.00733 )
+position = Vector2( -28.7599, 194.046 )
+scale = Vector2( 2.02936, 2.1165 )
 texture = ExtResource( 1 )
 script = ExtResource( 2 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
-scale = Vector2( 1, 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2( 0, 1.77963 )
+position = Vector2( 0.154675, 1.77963 )
 shape = SubResource( 1 )

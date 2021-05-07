@@ -11,12 +11,9 @@ func _ready():
 	var pos = rng.randi_range(0,1)
 	
 	global_position.x = 500
-	print(pos)
 	if pos == 0:
-		print("top")
 		global_position.y = 200
 	else:
-		print("bottom")
 		global_position.y = -200
 		self.flip_v = true
 
