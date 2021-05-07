@@ -4,7 +4,7 @@ var speed = 200
 var gravity = 100
 var movevelocity = 200
 var velocity = Vector2()
-
+signal save_now
 
 
 func _ready():
@@ -20,7 +20,7 @@ func get_input():
 
 func Kill():
 	get_tree().reload_current_scene()
-
+	emit_signal("save_now")
 
 func _physics_process(delta):
 	global_position.x = 0

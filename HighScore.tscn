@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=2]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://AllerDisplay.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 45
+font_data = SubResource( 1 )
+
+[node name="HighScore" type="Label"]
+margin_left = 354.889
+margin_top = 177.767
+margin_right = 508.889
+margin_bottom = 285.767
+custom_fonts/font = SubResource( 2 )
+text = "0"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}

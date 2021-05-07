@@ -7,21 +7,19 @@ var highScore
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	player.connect("tree_exiting",self, "save")
 	# Load high score
 	var file = File.new()
-	file.open("user://user.dat", File.READ)
+	file.open("user://user.dat", File.READ_WRITE)
 	highScore = file.get_as_text()
-	highScore = int(highScore)
 	file.close()
-	$HighScore.set_text(str(highScore))
+	HighScore.set_text(highScore)
 
 func save():
-	if score > highScore:
+	if score > int(highScore):
 		var file = File.new()
-		file.open("user://user.dat", File.READ)
-		highScore = file.get_as_text()
-		print(highScore)
+		file.open("user://user.dat", File.WRITE)
+		file.store_string(str(score))
+		file.close()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

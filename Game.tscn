@@ -45,19 +45,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="HighScore" type="Label" parent="."]
-margin_left = 354.889
-margin_top = 177.767
-margin_right = 508.889
-margin_bottom = 285.767
-custom_fonts/font = SubResource( 2 )
-text = "0"
-align = 1
-valign = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="bg" type="Sprite" parent="."]
 position = Vector2( 4.84814, 23.9448 )
 scale = Vector2( 1.05339, 1.05339 )
@@ -79,7 +66,7 @@ position = Vector2( 75.3227, -262.24 )
 rotation = -3.14159
 
 [node name="Spike6" parent="." instance=ExtResource( 3 )]
-position = Vector2( 268.053, -261.308 )
+position = Vector2( 302.071, -266.348 )
 rotation = -3.14159
 
 [node name="Spike2" parent="." instance=ExtResource( 3 )]
@@ -101,3 +88,5 @@ position = Vector2( 0.0289307, 16.842 )
 scale = Vector2( 1.01969, 850.187 )
 texture = SubResource( 6 )
 color = Color( 0.0627451, 0.756863, 0.847059, 1 )
+
+[connection signal="save_now" from="Player" to="." method="save"]

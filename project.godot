@@ -14,6 +14,10 @@ config/name="Speed Dev"
 run/main_scene="res://Game.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+HighScore="*res://HighScore.tscn"
+
 [input]
 
 jump={
