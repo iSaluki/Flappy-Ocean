@@ -1,9 +1,16 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Game.gd" type="Script" id=2]
 [ext_resource path="res://Spike.tscn" type="PackedScene" id=3]
 [ext_resource path="res://bg.png" type="Texture" id=4]
+
+[sub_resource type="DynamicFontData" id=5]
+font_path = "res://AllerDisplay.ttf"
+
+[sub_resource type="DynamicFont" id=6]
+size = 45
+font_data = SubResource( 5 )
 
 [sub_resource type="ProceduralSky" id=1]
 
@@ -24,6 +31,19 @@ gradient = SubResource( 3 )
 
 [node name="Game" type="Node2D"]
 script = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = -104.296
+margin_top = -302.776
+margin_right = 49.7043
+margin_bottom = -194.776
+custom_fonts/font = SubResource( 6 )
+text = "0"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="bg" type="Sprite" parent="."]
 position = Vector2( 4.84814, 23.9448 )
@@ -68,15 +88,3 @@ position = Vector2( 0.0289307, 16.842 )
 scale = Vector2( 1.01969, 850.187 )
 texture = SubResource( 4 )
 color = Color( 0.0627451, 0.756863, 0.847059, 1 )
-
-[node name="Label" type="Label" parent="."]
-margin_left = -25.0
-margin_top = -297.0
-margin_right = 44.0
-margin_bottom = -268.0
-text = "0"
-align = 1
-valign = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
