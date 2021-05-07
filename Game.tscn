@@ -68,3 +68,15 @@ position = Vector2( 0.0289307, 16.842 )
 scale = Vector2( 1.01969, 850.187 )
 texture = SubResource( 4 )
 color = Color( 0.0627451, 0.756863, 0.847059, 1 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = -25.0
+margin_top = -297.0
+margin_right = 44.0
+margin_bottom = -268.0
+text = "0"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}

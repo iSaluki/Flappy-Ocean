@@ -9,7 +9,7 @@ var rng = RandomNumberGenerator.new()
 func _ready():
 	rng.randomize()
 	var pos = rng.randi_range(0,1)
-	
+
 	global_position.x = 500
 	if pos == 0:
 		global_position.y = 200
