@@ -17,6 +17,7 @@ func get_input():
 		velocity.y = -movevelocity
 
 func _physics_process(delta):
+	global_position.x = 0
 	velocity.y = gravity
 	get_input()
 	get_collisions()
