@@ -17,7 +17,7 @@ func get_input():
 		velocity.y = -movevelocity
 
 func Kill():
-	print("The player has been killed")
+	get_tree().reload_current_scene()
 
 func _physics_process(delta):
 	global_position.x = 0
