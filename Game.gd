@@ -7,6 +7,7 @@ var highScore
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	HighScore.visible = true
 	# Load high score
 	var file = File.new()
 	file.open("user://user.dat", File.READ_WRITE)

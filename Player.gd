@@ -19,7 +19,7 @@ func get_input():
 		velocity.y = -movevelocity
 
 func Kill():
-	get_tree().reload_current_scene()
+	get_tree().change_scene("res://SceneTransition.tscn")
 	emit_signal("save_now")
 
 func _physics_process(delta):
