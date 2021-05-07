@@ -32,11 +32,24 @@ gradient = SubResource( 3 )
 [node name="Game" type="Node2D"]
 script = ExtResource( 2 )
 
-[node name="Label" type="Label" parent="."]
+[node name="Score" type="Label" parent="."]
 margin_left = -104.296
 margin_top = -302.776
 margin_right = 49.7043
 margin_bottom = -194.776
+custom_fonts/font = SubResource( 6 )
+text = "0"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HighScore" type="Label" parent="."]
+margin_left = 354.889
+margin_top = 177.767
+margin_right = 508.889
+margin_bottom = 285.767
 custom_fonts/font = SubResource( 6 )
 text = "0"
 align = 1

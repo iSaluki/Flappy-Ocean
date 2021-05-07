@@ -5,6 +5,8 @@ var gravity = 100
 var movevelocity = 200
 var velocity = Vector2()
 
+
+
 func _ready():
 	pass
 
@@ -18,6 +20,7 @@ func get_input():
 
 func Kill():
 	get_tree().reload_current_scene()
+
 
 func _physics_process(delta):
 	global_position.x = 0
