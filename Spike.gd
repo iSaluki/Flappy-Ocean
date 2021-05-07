@@ -5,9 +5,17 @@ var speed = 10
 var velocity = Vector2()
 var rng = RandomNumberGenerator.new()
 
+var spike1 = preload("res://spike1.png")
+var spike2 = preload("res://spike2.png")
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	rng.randomize()
+	var textureSet = rng.randi_range(0,1)
+	if textureSet == 0:
+		self.set_texture(spike1)
+	else:
+		self.set_texture(spike2)
 	var pos = rng.randi_range(0,1)
 
 	global_position.x = 500
