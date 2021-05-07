@@ -5,29 +5,29 @@
 [ext_resource path="res://Spike.tscn" type="PackedScene" id=3]
 [ext_resource path="res://bg.png" type="Texture" id=4]
 
-[sub_resource type="DynamicFontData" id=5]
+[sub_resource type="DynamicFontData" id=1]
 font_path = "res://AllerDisplay.ttf"
 
-[sub_resource type="DynamicFont" id=6]
+[sub_resource type="DynamicFont" id=2]
 size = 45
-font_data = SubResource( 5 )
+font_data = SubResource( 1 )
 
-[sub_resource type="ProceduralSky" id=1]
+[sub_resource type="ProceduralSky" id=3]
 
-[sub_resource type="Environment" id=2]
+[sub_resource type="Environment" id=4]
 background_mode = 2
-background_sky = SubResource( 1 )
+background_sky = SubResource( 3 )
 glow_enabled = true
 glow_intensity = 5.24
 glow_strength = 1.76
 glow_bloom = 0.57
 glow_blend_mode = 0
 
-[sub_resource type="Gradient" id=3]
+[sub_resource type="Gradient" id=5]
 colors = PoolColorArray( 0.0980392, 0.819608, 0.686275, 1, 0.439216, 0.921569, 0.243137, 1 )
 
-[sub_resource type="GradientTexture" id=4]
-gradient = SubResource( 3 )
+[sub_resource type="GradientTexture" id=6]
+gradient = SubResource( 5 )
 
 [node name="Game" type="Node2D"]
 script = ExtResource( 2 )
@@ -37,7 +37,7 @@ margin_left = -104.296
 margin_top = -302.776
 margin_right = 49.7043
 margin_bottom = -194.776
-custom_fonts/font = SubResource( 6 )
+custom_fonts/font = SubResource( 2 )
 text = "0"
 align = 1
 valign = 1
@@ -50,7 +50,7 @@ margin_left = 354.889
 margin_top = 177.767
 margin_right = 508.889
 margin_bottom = 285.767
-custom_fonts/font = SubResource( 6 )
+custom_fonts/font = SubResource( 2 )
 text = "0"
 align = 1
 valign = 1
@@ -93,11 +93,11 @@ position = Vector2( 1.22168, -10.6069 )
 current = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource( 2 )
+environment = SubResource( 4 )
 
 [node name="Light2D" type="Light2D" parent="."]
 visible = false
 position = Vector2( 0.0289307, 16.842 )
 scale = Vector2( 1.01969, 850.187 )
-texture = SubResource( 4 )
+texture = SubResource( 6 )
 color = Color( 0.0627451, 0.756863, 0.847059, 1 )
