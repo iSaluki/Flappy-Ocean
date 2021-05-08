@@ -1,15 +1,23 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Menu.gd" type="Script" id=1]
+[ext_resource path="res://AllerDisplay.ttf" type="DynamicFontData" id=2]
 
-[sub_resource type="InputEventAction" id=1]
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 2 )
+
+[sub_resource type="InputEventAction" id=2]
 action = "playBtnPress"
 pressed = true
 
-[sub_resource type="ShortCut" id=2]
-shortcut = SubResource( 1 )
+[sub_resource type="ShortCut" id=3]
+shortcut = SubResource( 2 )
 
-[sub_resource type="ImageTexture" id=3]
+[sub_resource type="ImageTexture" id=4]
+
+[sub_resource type="DynamicFont" id=5]
+size = 64
+font_data = ExtResource( 2 )
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
@@ -28,10 +36,51 @@ margin_left = -49.4759
 margin_top = -1.52588e-05
 margin_right = 49.5241
 margin_bottom = 48.0
+custom_fonts/font = SubResource( 1 )
 action_mode = 0
-shortcut = SubResource( 2 )
+shortcut = SubResource( 3 )
 text = "Play"
-icon = SubResource( 3 )
+icon = SubResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Quit" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 0.556
+anchor_right = 0.5
+anchor_bottom = 0.556
+margin_left = -49.981
+margin_top = -0.000549316
+margin_right = 49.019
+margin_bottom = 47.9995
+custom_fonts/font = SubResource( 1 )
+action_mode = 0
+shortcut = SubResource( 3 )
+text = "Quit"
+icon = SubResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -261.5
+margin_right = 261.5
+margin_bottom = 66.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Panel"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -260.5
+margin_right = 260.5
+margin_bottom = 76.0
+custom_fonts/font = SubResource( 5 )
+text = "Flappy Ocean"
 __meta__ = {
 "_edit_use_anchors_": false
 }

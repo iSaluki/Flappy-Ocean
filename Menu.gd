@@ -16,3 +16,5 @@ func _ready():
 func _process(delta):
 	if $Play.pressed:
 		get_tree().change_scene("res://SceneTransition.tscn")
+	if $Quit.pressed:
+		get_tree().quit()
