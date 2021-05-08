@@ -8,6 +8,8 @@ var rng = RandomNumberGenerator.new()
 var spike1 = preload("res://spike1.png")
 var spike2 = preload("res://spike2.png")
 
+signal increaseScore
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	rng.randomize()
@@ -32,3 +34,8 @@ func _physics_process(delta):
 	if global_position.x < -500:
 		self.get_parent().remove_child(self)
 #	move_and_slide(velocity)
+
+
+func _on_PointArea_area_entered(area):
+	if area.name == "PlayerArea":
+		emit_signal("increaseScore")

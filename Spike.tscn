@@ -1,10 +1,16 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://spike1.png" type="Texture" id=1]
 [ext_resource path="res://Spike.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 7.97479, 50.2822 )
+
+[sub_resource type="OccluderPolygon2D" id=2]
+polygon = PoolVector2Array( -7.79078, -49.8696, 7.41663, -49.8696, 7.65425, 50.1489, -8.26601, 49.9211 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 6.69089, 310.467 )
 
 [node name="Spike" type="Sprite"]
 position = Vector2( -28.7599, 194.046 )
@@ -17,3 +23,13 @@ script = ExtResource( 2 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( -0.0829374, -0.0430325 )
 shape = SubResource( 1 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+occluder = SubResource( 2 )
+
+[node name="PointArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PointArea"]
+shape = SubResource( 3 )
+
+[connection signal="area_entered" from="PointArea" to="." method="_on_PointArea_area_entered"]

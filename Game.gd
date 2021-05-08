@@ -3,10 +3,12 @@ extends Node2D
 var rng = RandomNumberGenerator.new()
 var score = 0
 var player = preload("res://Player.tscn").instance()
+var spike = preload("res://Spike.tscn").instance()
 var highScore
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	spike.connect("increaseScore", self, "increaseScore")
 	HighScore.visible = true
 	# Load high score
 	var file = File.new()
