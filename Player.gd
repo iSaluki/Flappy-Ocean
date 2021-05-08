@@ -17,6 +17,8 @@ func get_collisions():
 func get_input():
 	if Input.is_action_pressed("jump"):
 		velocity.y = -movevelocity
+	if Input.is_action_pressed("escape"):
+		get_tree().change_scene("res://Menu.tscn")
 
 func Kill():
 	get_tree().change_scene("res://SceneTransition.tscn")

@@ -1,7 +1,7 @@
 extends ColorRect
 
 
-export(String, FILE, "*.tscn") var next_scene_path
+
 
 onready var _anim_player := $AnimationPlayer
 
@@ -12,4 +12,6 @@ func _ready():
 	_anim_player.play_backwards("Fade")
 	_anim_player.play("Fade")
 	yield(_anim_player, "animation_finished")
-	get_tree().change_scene(next_scene_path)
+	get_tree().change_scene("res://Game.tscn")
+
+

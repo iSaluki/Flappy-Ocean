@@ -9,16 +9,18 @@ font_path = "res://AllerDisplay.ttf"
 size = 45
 font_data = SubResource( 1 )
 
-[node name="HighScore" type="Label"]
-margin_left = 354.889
-margin_top = 177.767
-margin_right = 508.889
-margin_bottom = 285.767
+[node name="Node2D" type="Node2D"]
+
+[node name="HighScore" type="Label" parent="."]
+margin_left = 871.483
+margin_top = 485.688
+margin_right = 1025.48
+margin_bottom = 593.688
 custom_fonts/font = SubResource( 2 )
 text = "0"
 align = 1
 valign = 1
 script = ExtResource( 1 )
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": true
 }

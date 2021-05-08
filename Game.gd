@@ -13,7 +13,7 @@ func _ready():
 	file.open("user://user.dat", File.READ_WRITE)
 	highScore = file.get_as_text()
 	file.close()
-	HighScore.set_text(highScore)
+	HighScore.get_node("HighScore").set_text(highScore)
 
 func save():
 	if score > int(highScore):
